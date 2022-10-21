@@ -28,6 +28,9 @@ public class BaseDao {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(name = "updated_by")
+    private String updatedBy;
+
     @PrePersist
     void onCreate() {
         this.createdAt = LocalDateTime.now(ZoneId.of("GMT+7"));
@@ -37,6 +40,7 @@ public class BaseDao {
     @PreUpdate
     void onUpdate() {
         this.updatedAt = LocalDateTime.now(ZoneId.of("GMT+7"));
+        this.updatedBy = "SYSTEM";
     }
 
 }
