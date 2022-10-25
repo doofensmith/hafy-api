@@ -45,7 +45,14 @@
 			<scope>runtime</scope>
 		</dependency>
 
-<!--		UNIT TEST-->
+<!--		DATABASE MIGRATION FLYWAY-->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-maven-plugin</artifactId>
+			<version>9.5.1</version>
+		</dependency>
+
+		<!--		UNIT TEST-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
