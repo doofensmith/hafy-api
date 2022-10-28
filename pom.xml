@@ -52,6 +52,12 @@
 			<version>9.5.1</version>
 		</dependency>
 
+<!--		MESSAGE BROKER : KAFKA-->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
 		<!--		UNIT TEST-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

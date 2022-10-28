@@ -81,7 +81,7 @@ public class TypeServiceImpl implements TypeService {
         if (typeDaoOld.isPresent()) {
             log.debug("Request body : {}", req);
             TypeDao typeDaoNew = typeDaoOld.get();
-            typeDaoNew.setType(req.getType());
+            typeDaoNew.setType(req.getType().toString());
             log.debug("Update data with repository.");
             typeDaoNew = repository.save(typeDaoNew);
             log.debug("Convert updating result to data transfer.");

@@ -1,11 +1,18 @@
 package com.softlaboratory.hafyapi.controller;
 
+import com.softlaboratory.hafyapi.constant.AppConstant;
 import com.softlaboratory.hafyapi.domain.dto.TypeDto;
+import com.softlaboratory.hafyapi.kafka.KafkaProducer;
 import com.softlaboratory.hafyapi.service.TypeService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.SendResult;
+import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.concurrent.ExecutionException;
 
 @Log4j2
 @RestController
@@ -15,10 +22,16 @@ public class TypeController {
     @Autowired
     private TypeService service;
 
+    @Autowired
+    private KafkaProducer producer;
+
+    @Autowired
+    private KafkaTemplate<String, ResponseEntity<Object>> template;
+
     @GetMapping(value = "")
-    public ResponseEntity<Object> getAll() {
+    public ResponseEntity<Object> getAll() throws ExecutionException, InterruptedException {
         try {
-            return service.getAll();
+            return producer.sendMessage().get().getProducerRecord().value();
         }catch (Exception e) {
             log.info("Error get all {}", e.getMessage());
             log.debug("Debug error", e);

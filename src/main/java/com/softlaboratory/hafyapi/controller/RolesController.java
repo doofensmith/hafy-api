@@ -20,8 +20,8 @@ public class RolesController {
         try {
             return service.getAll();
         }catch (Exception e) {
-            log.info("Error get all : {}", e.getMessage());
-            log.debug("Debug error : ",e);
+            log.error("Error get all : {}", e.getMessage());
+            log.trace("Trace error : ",e);
             throw e;
         }
     }
@@ -31,8 +31,8 @@ public class RolesController {
         try {
             return service.getById(id);
         }catch (Exception e) {
-            log.info("Error get by id : {}", e.getMessage());
-            log.debug("Debug error : ",e);
+            log.error("Error get by id : {}", e.getMessage());
+            log.trace("Trace error : ",e);
             throw e;
         }
     }
@@ -42,8 +42,8 @@ public class RolesController {
         try {
             return service.getByRole(role);
         }catch (Exception e) {
-            log.info("Error get by role : {}", e.getMessage());
-            log.debug("Debug error : ",e);
+            log.error("Error get by role : {}", e.getMessage());
+            log.trace("Trace error : ",e);
             throw e;
         }
     }
@@ -53,8 +53,6 @@ public class RolesController {
         try {
             return service.create(req);
         }catch (Exception e) {
-            log.info("Error creating new role : {}", e.getMessage());
-            log.debug("Debug error : ",e);
             throw e;
         }
     }
@@ -64,8 +62,8 @@ public class RolesController {
         try {
             return service.updateById(id, req);
         }catch (Exception e) {
-            log.info("Error updating role : {}", e.getMessage());
-            log.debug("Debug error : ",e);
+            log.error("Error updating role : {}", e.getMessage());
+            log.trace("Trace error : ",e);
             throw e;
         }
     }
@@ -75,8 +73,8 @@ public class RolesController {
         try {
             return service.deleteById(id);
         }catch (Exception e) {
-            log.info("Error deleting role : {}", e.getMessage());
-            log.debug("Debug error : ",e);
+            log.error("Error deleting role : {}", e.getMessage());
+            log.trace("Trace error : ",e);
             throw e;
         }
     }

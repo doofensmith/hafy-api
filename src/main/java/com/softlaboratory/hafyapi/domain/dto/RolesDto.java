@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
+import static com.softlaboratory.hafyapi.constant.AppConstant.Role;
+
 /**
  * A DTO for the {@link com.softlaboratory.hafyapi.domain.dao.RolesDao} entity
  */
@@ -19,6 +21,6 @@ public class RolesDto implements Serializable {
     private static final long serialVersionUID = -4314195404190785688L;
 
     private Long id;
-    private String role;
+    private Role role;
 
 }
