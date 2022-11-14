@@ -16,8 +16,8 @@ import java.io.Serializable;
 @Data
 @SuperBuilder
 @Entity
-@Table(name = "t_roles")
-@SQLDelete(sql = "update from t_roles set is_deleted=true, deleted_at=current_timestamp where id=?")
+@Table(name = "t_account_role")
+@SQLDelete(sql = "update from t_account_role set is_deleted=true, deleted_at=current_timestamp where id=?")
 @Where(clause = "is_deleted=false")
 public class RolesDao extends BaseDaoSoftDelete implements Serializable {
 
