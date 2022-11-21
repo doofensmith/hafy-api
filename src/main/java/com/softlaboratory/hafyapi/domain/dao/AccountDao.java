@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -53,7 +55,7 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
             joinColumns = @JoinColumn(name = "id_account"),
             inverseJoinColumns = @JoinColumn(name = "id_role")
     )
-    private Collection<RoleDao> roles;
+    private List<RoleDao> roles;
 
     @OneToMany(fetch = FetchType.EAGER)
     @JoinTable(
@@ -61,11 +63,11 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
             joinColumns = @JoinColumn(name = "id_account"),
             inverseJoinColumns = @JoinColumn(name = "id_type")
     )
-    private Collection<TypeDao> types;
+    private List<TypeDao> types;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return Stream.concat(roles.stream(), types.stream()).collect(Collectors.toList());
     }
 
     @Override
