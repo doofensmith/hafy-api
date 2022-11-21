@@ -37,11 +37,11 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable {
     @Column(name = "id_profile", nullable = false)
     private Long idProfile;
 
-    @ElementCollection(targetClass = Long.class)
-    @JoinTable(name = "t_account_role", joinColumns = @JoinColumn(name = "id"))
-    @JoinColumn(name = "id_roles", nullable = false, referencedColumnName = "id")
-    private List<Long> idRoles;
+    //@ElementCollection(targetClass = Long.class)
+    //@JoinTable(name = "t_account_role", joinColumns = @JoinColumn(name = "id"))
+    //@JoinColumn(name = "id_roles", nullable = false, referencedColumnName = "id")
+    //private List<Long> idRoles;
 
-    @JoinColumn(name = "id_types", nullable = false, referencedColumnName = "id")
-    private List<Long> idTypes;
+    //@JoinColumn(name = "id_types", nullable = false, referencedColumnName = "id")
+    //private List<Long> idTypes;
 }

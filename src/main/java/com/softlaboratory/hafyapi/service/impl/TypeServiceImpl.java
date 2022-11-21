@@ -29,13 +29,16 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public ResponseEntity<Object> getAll() {
         log.info("Starting get all account type data.");
+
         log.debug("Fetching all data with repository.");
         List<TypeDao> typeDaoList = repository.findAll();
-        List<TypeDto> typeDtoList = new ArrayList<>();
+
         log.debug("Convert to data transfer.");
+        List<TypeDto> typeDtoList = new ArrayList<>();
         for (TypeDao typeDao : typeDaoList) {
             typeDtoList.add(mapper.map(typeDao, TypeDto.class));
         }
+
         log.info("Get all account type data success.");
         return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), typeDtoList);
     }
@@ -43,32 +46,37 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public ResponseEntity<Object> getById(Long id) {
         log.info("Starting get account type data by id.");
+
         log.debug("Find data id {} with repository.", id);
         Optional<TypeDao> typeDao = repository.findById(id);
+
         if (typeDao.isPresent()) {
-            log.debug("Convert to data transfer object.");
+            log.debug("Convert to data transfer.");
             TypeDto dto = mapper.map(typeDao, TypeDto.class);
-            log.info("Get account data by id success.");
+
+            log.info("Get account type data by id success.");
             return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), dto);
         }else {
             log.debug("Account type data with id {} not found.", id);
-            log.info("Get account type data failed.");
-            return ResponseUtil.build(
-                    HttpStatus.BAD_REQUEST,
-                    HttpStatus.BAD_REQUEST.getReasonPhrase(),
-                    null);
+
+            log.info("Get account type data by id failed.");
+            return ResponseUtil.build(HttpStatus.BAD_REQUEST, HttpStatus.BAD_REQUEST.getReasonPhrase(), null);
         }
     }
 
     @Override
     public ResponseEntity<Object> create(TypeDto req) {
         log.info("Starting create new account type.");
-        log.debug("Request body : {}", req);
+
+        log.debug("Converting request {} to data access.", req);
         TypeDao typeDao = mapper.map(req, TypeDao.class);
+
         log.debug("Save new data with repository.");
         typeDao = repository.save(typeDao);
+
         log.debug("Convert new data result to data transfer.");
         TypeDto typeDto = mapper.map(typeDao, TypeDto.class);
+
         log.info("Creating new account type success.");
         return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), typeDto);
     }
@@ -76,45 +84,49 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public ResponseEntity<Object> update(Long id, TypeDto req) {
         log.info("Starting update account type data.");
+
         log.debug("Find old data to update id {} with repository.", id);
         Optional<TypeDao> typeDaoOld = repository.findById(id);
+
         if (typeDaoOld.isPresent()) {
-            log.debug("Request body : {}", req);
+            log.debug("Converting request {} to data access.", req);
             TypeDao typeDaoNew = typeDaoOld.get();
-            typeDaoNew.setType(req.getType().toString());
+            typeDaoNew.setType(req.getType());
+
             log.debug("Update data with repository.");
             typeDaoNew = repository.save(typeDaoNew);
+
             log.debug("Convert updating result to data transfer.");
             TypeDto typeDto = mapper.map(typeDaoNew, TypeDto.class);
+
             log.info("Update account type data success.");
             return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), typeDto);
         }else {
             log.debug("Account type data with id {} not found.", id);
+
             log.info("Update account type data failed.");
-            return ResponseUtil.build(
-                    HttpStatus.BAD_REQUEST,
-                    HttpStatus.BAD_REQUEST.getReasonPhrase(),
-                    null);
+            return ResponseUtil.build(HttpStatus.BAD_REQUEST, HttpStatus.BAD_REQUEST.getReasonPhrase(), null);
         }
     }
 
     @Override
     public ResponseEntity<Object> delete(Long id) {
         log.info("Starting delete account type data.");
+
         log.debug("Find data to delete id {} with repository.", id);
         Optional<TypeDao> typeDao = repository.findById(id);
+
         if (typeDao.isPresent()) {
             log.debug("Delete data with repository.");
             repository.deleteById(id);
+
             log.info("Delete account type data success.");
             return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), null);
         }else {
             log.debug("Account type data with id {} not found.", id);
+
             log.info("Delete account type data failed.");
-            return ResponseUtil.build(
-                    HttpStatus.BAD_REQUEST,
-                    HttpStatus.BAD_REQUEST.getReasonPhrase(),
-                    null);
+            return ResponseUtil.build(HttpStatus.BAD_REQUEST, HttpStatus.BAD_REQUEST.getReasonPhrase(), null);
         }
     }
 

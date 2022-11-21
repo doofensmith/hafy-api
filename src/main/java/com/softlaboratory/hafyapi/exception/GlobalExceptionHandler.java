@@ -17,10 +17,7 @@ public class GlobalExceptionHandler {
         log.error("Error message : {}", e.getMessage());
         log.trace("Trace message : ", e);
 
-        return ResponseUtil.build(
-                HttpStatus.BAD_REQUEST,
-                HttpStatus.BAD_REQUEST.getReasonPhrase(),
-                null);
+        return ResponseUtil.build(HttpStatus.BAD_REQUEST, HttpStatus.BAD_REQUEST.getReasonPhrase(), null);
     }
 
 }

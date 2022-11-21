@@ -1,5 +1,7 @@
 package com.softlaboratory.hafyapi.domain.dto;
 
+import com.softlaboratory.hafyapi.constant.enums.RoleEnum;
+import com.softlaboratory.hafyapi.domain.dao.RoleDao;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -7,20 +9,18 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-import static com.softlaboratory.hafyapi.constant.AppConstant.Role;
-
 /**
- * A DTO for the {@link com.softlaboratory.hafyapi.domain.dao.RolesDao} entity
+ * A DTO for the {@link RoleDao} entity
  */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
-public class RolesDto implements Serializable {
+public class RoleDto implements Serializable {
 
     private static final long serialVersionUID = -4314195404190785688L;
 
     private Long id;
-    private Role role;
+    private RoleEnum role;
 
 }

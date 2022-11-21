@@ -1,7 +1,7 @@
 package com.softlaboratory.hafyapi.controller;
 
-import com.softlaboratory.hafyapi.domain.dto.RolesDto;
-import com.softlaboratory.hafyapi.service.RolesService;
+import com.softlaboratory.hafyapi.domain.dto.RoleDto;
+import com.softlaboratory.hafyapi.service.RoleService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
 @Log4j2
 @RestController
 @RequestMapping("/roles")
-public class RolesController {
+public class RoleController {
 
     @Autowired
-    private RolesService service;
+    private RoleService service;
 
     @GetMapping(value = "")
     public ResponseEntity<Object> getAll() {
@@ -37,19 +37,8 @@ public class RolesController {
         }
     }
 
-    @GetMapping(value = "/q")
-    public ResponseEntity<Object> getByRole(@RequestParam(value = "role") String role) {
-        try {
-            return service.getByRole(role);
-        }catch (Exception e) {
-            log.error("Error get by role : {}", e.getMessage());
-            log.trace("Trace error : ",e);
-            throw e;
-        }
-    }
-
     @PostMapping(value = "")
-    public ResponseEntity<Object> createRole(@RequestBody RolesDto req) {
+    public ResponseEntity<Object> createRole(@RequestBody RoleDto req) {
         try {
             return service.create(req);
         }catch (Exception e) {
@@ -58,7 +47,7 @@ public class RolesController {
     }
 
     @PatchMapping(value = "/{id}")
-    public ResponseEntity<Object> updateRole(@PathVariable Long id, @RequestBody RolesDto req) {
+    public ResponseEntity<Object> updateRole(@PathVariable Long id, @RequestBody RoleDto req) {
         try {
             return service.updateById(id, req);
         }catch (Exception e) {

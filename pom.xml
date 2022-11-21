@@ -48,8 +48,7 @@
 <!--		DATABASE MIGRATION FLYWAY-->
 		<dependency>
 			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-maven-plugin</artifactId>
-			<version>9.5.1</version>
+			<artifactId>flyway-core</artifactId>
 		</dependency>
 
 		<!--		UNIT TEST-->

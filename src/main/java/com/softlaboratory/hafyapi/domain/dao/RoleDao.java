@@ -1,5 +1,6 @@
 package com.softlaboratory.hafyapi.domain.dao;
 
+import com.softlaboratory.hafyapi.constant.enums.RoleEnum;
 import com.softlaboratory.hafyapi.domain.common.BaseDaoSoftDelete;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +20,7 @@ import java.io.Serializable;
 @Table(name = "t_account_role")
 @SQLDelete(sql = "update from t_account_role set is_deleted=true, deleted_at=current_timestamp where id=?")
 @Where(clause = "is_deleted=false")
-public class RolesDao extends BaseDaoSoftDelete implements Serializable {
+public class RoleDao extends BaseDaoSoftDelete implements Serializable {
 
     private static final long serialVersionUID = 5740954081177401397L;
 
@@ -28,7 +29,7 @@ public class RolesDao extends BaseDaoSoftDelete implements Serializable {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(nullable = false, length = 20)
-    private String role;
+    @Column(nullable = false, length = 10)
+    private RoleEnum role;
 
 }

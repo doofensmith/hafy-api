@@ -1,5 +1,6 @@
 package com.softlaboratory.hafyapi.domain.dao;
 
+import com.softlaboratory.hafyapi.constant.enums.AccountTypeEnum;
 import com.softlaboratory.hafyapi.domain.common.BaseDaoSoftDelete;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,7 +29,7 @@ public class TypeDao extends BaseDaoSoftDelete implements Serializable {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "type", nullable = false, length = 20)
-    private String type;
+    @Column(nullable = false, length = 20)
+    private AccountTypeEnum type;
 
 }
