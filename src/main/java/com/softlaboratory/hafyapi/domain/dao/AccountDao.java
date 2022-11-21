@@ -10,7 +10,7 @@ import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,14 +34,24 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable {
     @Column(nullable = false, length = 15)
     private String password;
 
-    @Column(name = "id_profile", nullable = false)
-    private Long idProfile;
+    @OneToOne
+    @JoinColumn(name = "id_profile", nullable = false)
+    private ProfileDao profile;
 
-    //@ElementCollection(targetClass = Long.class)
-    //@JoinTable(name = "t_account_role", joinColumns = @JoinColumn(name = "id"))
-    //@JoinColumn(name = "id_roles", nullable = false, referencedColumnName = "id")
-    //private List<Long> idRoles;
+    @OneToMany
+    @JoinTable(
+            name = "bt_account_roles",
+            joinColumns = @JoinColumn(name = "id_account"),
+            inverseJoinColumns = @JoinColumn(name = "id_role")
+    )
+    private Set<RoleDao> roles;
 
-    //@JoinColumn(name = "id_types", nullable = false, referencedColumnName = "id")
-    //private List<Long> idTypes;
+    @OneToMany
+    @JoinTable(
+            name = "bt_account_types",
+            joinColumns = @JoinColumn(name = "id_account"),
+            inverseJoinColumns = @JoinColumn(name = "id_type")
+    )
+    private Set<TypeDao> types;
+
 }
