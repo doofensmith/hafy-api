@@ -2,7 +2,7 @@ package com.softlaboratory.hafyapi.service.impl;
 
 import com.softlaboratory.hafyapi.domain.dao.RoleDao;
 import com.softlaboratory.hafyapi.domain.dto.RoleDto;
-import com.softlaboratory.hafyapi.repository.RolesRepository;
+import com.softlaboratory.hafyapi.repository.RoleRepository;
 import com.softlaboratory.hafyapi.service.RoleService;
 import com.softlaboratory.hafyapi.util.ResponseUtil;
 import lombok.extern.log4j.Log4j2;
@@ -21,7 +21,7 @@ import java.util.Optional;
 public class RoleServiceImpl implements RoleService {
 
     @Autowired
-    private RolesRepository repository;
+    private RoleRepository repository;
 
     @Autowired
     private ModelMapper mapper;
