@@ -39,7 +39,7 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
     @Column(nullable = false, length = 30, unique = true)
     private String username;
 
-    @Column(nullable = false, length = 15)
+    @Column(nullable = false, length = 100)
     private String password;
 
     @Column(name = "active", columnDefinition = "boolean default true")
@@ -49,7 +49,7 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
     @JoinColumn(name = "id_profile", nullable = false)
     private ProfileDao profile;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "bt_account_roles",
             joinColumns = @JoinColumn(name = "id_account"),
@@ -57,7 +57,7 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
     )
     private List<RoleDao> roles;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "bt_account_types",
             joinColumns = @JoinColumn(name = "id_account"),

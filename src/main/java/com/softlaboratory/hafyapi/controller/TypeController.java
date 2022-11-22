@@ -18,7 +18,7 @@ public class TypeController {
     private TypeService service;
 
     @GetMapping(value = "")
-    public ResponseEntity<Object> getAll() throws ExecutionException, InterruptedException {
+    public ResponseEntity<Object> getAll() {
         try {
             return service.getAll();
         }catch (Exception e) {
