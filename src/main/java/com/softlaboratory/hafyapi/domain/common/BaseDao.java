@@ -1,4 +1,4 @@
-package com.softlaboratory.hafyapi.config.domain.common;
+package com.softlaboratory.hafyapi.domain.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

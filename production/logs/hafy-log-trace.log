@@ -1,0 +1,1189 @@
+2022-11-22 23:06:53.733  INFO 14544 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:06:53.769  INFO 14544 --- [main] com.softlaboratory.hafyapi.Application   : Starting Application using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 14544 (C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:06:53.772 DEBUG 14544 --- [main] com.softlaboratory.hafyapi.Application   : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:06:53.773  INFO 14544 --- [main] com.softlaboratory.hafyapi.Application   : The following 1 profile is active: "prod"
+2022-11-22 23:06:54.790  INFO 14544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:06:54.794  INFO 14544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:06:54.924  INFO 14544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:06:54.959  INFO 14544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:06:54.959  INFO 14544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:06:54.978  INFO 14544 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:06:54.979  INFO 14544 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:06:54.980  INFO 14544 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:06:54.981  INFO 14544 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:06:54.982  INFO 14544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:06:56.215  INFO 14544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5001 (http)
+2022-11-22 23:06:56.227  INFO 14544 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:06:56.228  INFO 14544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-22 23:06:56.228  INFO 14544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-22 23:06:56.576  INFO 14544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-11-22 23:06:56.576  INFO 14544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2749 ms
+2022-11-22 23:06:56.837  INFO 14544 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:06:56.837  INFO 14544 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:06:56.837  INFO 14544 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:06:56.839 DEBUG 14544 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:06:56.840 DEBUG 14544 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:06:56.840 DEBUG 14544 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:06:56.840 DEBUG 14544 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:06:56.840 DEBUG 14544 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:06:56.840 DEBUG 14544 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:06:56.841 DEBUG 14544 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:06:56.841 DEBUG 14544 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:06:56.841 DEBUG 14544 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:06:56.844 DEBUG 14544 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:06:56.844 DEBUG 14544 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:06:56.846 DEBUG 14544 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database.sql
+2022-11-22 23:06:56.846 DEBUG 14544 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database_auth.sql
+2022-11-22 23:06:56.846 DEBUG 14544 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:06:56.849 DEBUG 14544 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database_auth.sql
+2022-11-22 23:06:56.851 DEBUG 14544 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database.sql
+2022-11-22 23:06:57.191  WARN 14544 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+2022-11-22 23:06:57.196  INFO 14544 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-22 23:06:57.217  INFO 14544 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-22 23:06:57.244 ERROR 14544 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.softlaboratory.hafyapi.Application.main(Application.java:10)
+Caused by: org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.flywaydb.core.internal.database.DatabaseTypeRegister.getDatabaseTypeForConnection(DatabaseTypeRegister.java:106)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+
+2022-11-22 23:07:28.888  INFO 11592 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:07:28.941  INFO 11592 --- [main] com.softlaboratory.hafyapi.Application   : Starting Application using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 11592 (C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:07:28.943 DEBUG 11592 --- [main] com.softlaboratory.hafyapi.Application   : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:07:28.944  INFO 11592 --- [main] com.softlaboratory.hafyapi.Application   : The following 1 profile is active: "prod"
+2022-11-22 23:07:29.941  INFO 11592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:07:29.944  INFO 11592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:07:30.079  INFO 11592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:07:30.116  INFO 11592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:07:30.116  INFO 11592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:07:30.134  INFO 11592 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:07:30.135  INFO 11592 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:07:30.136  INFO 11592 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:07:30.137  INFO 11592 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:07:30.137  INFO 11592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:07:31.422  INFO 11592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5001 (http)
+2022-11-22 23:07:31.436  INFO 11592 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:07:31.438  INFO 11592 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-22 23:07:31.438  INFO 11592 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-22 23:07:31.774  INFO 11592 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-11-22 23:07:31.774  INFO 11592 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2767 ms
+2022-11-22 23:07:32.027  INFO 11592 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:07:32.027  INFO 11592 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:07:32.027  INFO 11592 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:07:32.030 DEBUG 11592 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:07:32.031 DEBUG 11592 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:07:32.032 DEBUG 11592 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:07:32.032 DEBUG 11592 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:07:32.032 DEBUG 11592 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:07:32.032 DEBUG 11592 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:07:32.032 DEBUG 11592 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:07:32.033 DEBUG 11592 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:07:32.033 DEBUG 11592 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:07:32.036 DEBUG 11592 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:07:32.036 DEBUG 11592 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:07:32.038 DEBUG 11592 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database.sql
+2022-11-22 23:07:32.039 DEBUG 11592 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database_auth.sql
+2022-11-22 23:07:32.039 DEBUG 11592 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:07:32.044 DEBUG 11592 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database_auth.sql
+2022-11-22 23:07:32.046 DEBUG 11592 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database.sql
+2022-11-22 23:07:32.255  WARN 11592 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+2022-11-22 23:07:32.260  INFO 11592 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-22 23:07:32.286  INFO 11592 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-22 23:07:32.331 ERROR 11592 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.softlaboratory.hafyapi.Application.main(Application.java:10)
+Caused by: org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.flywaydb.core.internal.database.DatabaseTypeRegister.getDatabaseTypeForConnection(DatabaseTypeRegister.java:106)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+
+2022-11-22 23:09:43.506  INFO 1416 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:09:43.543  INFO 1416 --- [main] com.softlaboratory.hafyapi.Application   : Starting Application using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 1416 (C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:09:43.544 DEBUG 1416 --- [main] com.softlaboratory.hafyapi.Application   : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:09:43.545  INFO 1416 --- [main] com.softlaboratory.hafyapi.Application   : The following 1 profile is active: "prod"
+2022-11-22 23:09:44.569  INFO 1416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:09:44.574  INFO 1416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:09:44.704  INFO 1416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:09:44.741  INFO 1416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:09:44.742  INFO 1416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:09:44.758  INFO 1416 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:09:44.759  INFO 1416 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:09:44.760  INFO 1416 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:09:44.762  INFO 1416 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:09:44.762  INFO 1416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:09:46.037  INFO 1416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5001 (http)
+2022-11-22 23:09:46.053  INFO 1416 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:09:46.054  INFO 1416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-22 23:09:46.054  INFO 1416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-22 23:09:46.419  INFO 1416 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-11-22 23:09:46.420  INFO 1416 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2817 ms
+2022-11-22 23:09:46.679  INFO 1416 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:09:46.680  INFO 1416 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:09:46.680  INFO 1416 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:09:46.681 DEBUG 1416 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:09:46.682 DEBUG 1416 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:09:46.683 DEBUG 1416 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:09:46.683 DEBUG 1416 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:09:46.683 DEBUG 1416 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:09:46.683 DEBUG 1416 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:09:46.683 DEBUG 1416 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:09:46.684 DEBUG 1416 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:09:46.684 DEBUG 1416 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:09:46.686 DEBUG 1416 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:09:46.686 DEBUG 1416 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:09:46.688 DEBUG 1416 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database.sql
+2022-11-22 23:09:46.688 DEBUG 1416 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database_auth.sql
+2022-11-22 23:09:46.688 DEBUG 1416 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:09:46.700 DEBUG 1416 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database_auth.sql
+2022-11-22 23:09:46.701 DEBUG 1416 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database.sql
+2022-11-22 23:09:46.942  WARN 1416 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+2022-11-22 23:09:46.947  INFO 1416 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-22 23:09:46.973  INFO 1416 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-22 23:09:47.006 ERROR 1416 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.softlaboratory.hafyapi.Application.main(Application.java:10)
+Caused by: org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.flywaydb.core.internal.database.DatabaseTypeRegister.getDatabaseTypeForConnection(DatabaseTypeRegister.java:106)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+
+2022-11-22 23:11:05.507  INFO 25448 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:11:05.550  INFO 25448 --- [main] com.softlaboratory.hafyapi.Application   : Starting Application using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 25448 (C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:11:05.552 DEBUG 25448 --- [main] com.softlaboratory.hafyapi.Application   : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:11:05.553  INFO 25448 --- [main] com.softlaboratory.hafyapi.Application   : The following 1 profile is active: "prod"
+2022-11-22 23:11:06.550  INFO 25448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:11:06.554  INFO 25448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:11:06.699  INFO 25448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:11:06.742  INFO 25448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:11:06.742  INFO 25448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:11:06.771  INFO 25448 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:11:06.772  INFO 25448 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:11:06.772  INFO 25448 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:11:06.773  INFO 25448 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:11:06.774  INFO 25448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:11:08.022  INFO 25448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5001 (http)
+2022-11-22 23:11:08.040  INFO 25448 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:11:08.041  INFO 25448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-22 23:11:08.042  INFO 25448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-22 23:11:08.403  INFO 25448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-11-22 23:11:08.403  INFO 25448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2791 ms
+2022-11-22 23:11:08.652  INFO 25448 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:11:08.652  INFO 25448 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:11:08.652  INFO 25448 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:11:08.655 DEBUG 25448 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:11:08.656 DEBUG 25448 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:11:08.657 DEBUG 25448 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:11:08.657 DEBUG 25448 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:11:08.657 DEBUG 25448 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:11:08.657 DEBUG 25448 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:11:08.658 DEBUG 25448 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:11:08.658 DEBUG 25448 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:11:08.659 DEBUG 25448 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:11:08.661 DEBUG 25448 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:11:08.661 DEBUG 25448 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:11:08.663 DEBUG 25448 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database.sql
+2022-11-22 23:11:08.664 DEBUG 25448 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database_auth.sql
+2022-11-22 23:11:08.664 DEBUG 25448 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:11:08.668 DEBUG 25448 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database_auth.sql
+2022-11-22 23:11:08.669 DEBUG 25448 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database.sql
+2022-11-22 23:11:08.897  WARN 25448 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+2022-11-22 23:11:08.900  INFO 25448 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-22 23:11:08.925  INFO 25448 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-22 23:11:08.966 ERROR 25448 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.softlaboratory.hafyapi.Application.main(Application.java:10)
+Caused by: org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.flywaydb.core.internal.database.DatabaseTypeRegister.getDatabaseTypeForConnection(DatabaseTypeRegister.java:106)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+
+2022-11-22 23:13:39.450  INFO 7204 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:13:39.481  INFO 7204 --- [main] com.softlaboratory.hafyapi.Application   : Starting Application using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 7204 (C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:13:39.483 DEBUG 7204 --- [main] com.softlaboratory.hafyapi.Application   : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:13:39.484  INFO 7204 --- [main] com.softlaboratory.hafyapi.Application   : The following 1 profile is active: "prod"
+2022-11-22 23:13:40.455  INFO 7204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:13:40.459  INFO 7204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:13:40.582  INFO 7204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:13:40.626  INFO 7204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:13:40.626  INFO 7204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:13:40.641  INFO 7204 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:13:40.642  INFO 7204 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:13:40.642  INFO 7204 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:13:40.643  INFO 7204 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:13:40.644  INFO 7204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:13:41.853  INFO 7204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5001 (http)
+2022-11-22 23:13:41.866  INFO 7204 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:13:41.867  INFO 7204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-22 23:13:41.867  INFO 7204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-22 23:13:42.240  INFO 7204 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-11-22 23:13:42.240  INFO 7204 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2696 ms
+2022-11-22 23:13:42.470  INFO 7204 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:13:42.470  INFO 7204 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:13:42.471  INFO 7204 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:13:42.473 DEBUG 7204 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:13:42.474 DEBUG 7204 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:13:42.474 DEBUG 7204 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:13:42.475 DEBUG 7204 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:13:42.475 DEBUG 7204 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:13:42.475 DEBUG 7204 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:13:42.475 DEBUG 7204 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:13:42.476 DEBUG 7204 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:13:42.476 DEBUG 7204 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:13:42.478 DEBUG 7204 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:13:42.478 DEBUG 7204 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:13:42.480 DEBUG 7204 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database.sql
+2022-11-22 23:13:42.480 DEBUG 7204 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database_auth.sql
+2022-11-22 23:13:42.481 DEBUG 7204 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:13:42.483 DEBUG 7204 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database_auth.sql
+2022-11-22 23:13:42.484 DEBUG 7204 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database.sql
+2022-11-22 23:13:42.656  WARN 7204 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+2022-11-22 23:13:42.659  INFO 7204 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-22 23:13:42.673  INFO 7204 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-22 23:13:42.701 ERROR 7204 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.softlaboratory.hafyapi.Application.main(Application.java:10)
+Caused by: org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.flywaydb.core.internal.database.DatabaseTypeRegister.getDatabaseTypeForConnection(DatabaseTypeRegister.java:106)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+
+2022-11-22 23:15:35.258  INFO 8600 --- [main] c.s.hafyapi.ApplicationTests             : Starting ApplicationTests using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 8600 (started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:15:35.258  INFO 8600 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:15:35.260 DEBUG 8600 --- [main] c.s.hafyapi.ApplicationTests             : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:15:35.261  INFO 8600 --- [main] c.s.hafyapi.ApplicationTests             : The following 1 profile is active: "prod"
+2022-11-22 23:15:36.089  INFO 8600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:15:36.093  INFO 8600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:15:36.196  INFO 8600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:15:36.233  INFO 8600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:15:36.233  INFO 8600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:15:36.251  INFO 8600 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:15:36.252  INFO 8600 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:15:36.253  INFO 8600 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:15:36.254  INFO 8600 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:15:36.255  INFO 8600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:15:36.951  INFO 8600 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:15:36.951  INFO 8600 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:15:36.951  INFO 8600 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:15:36.953 DEBUG 8600 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:15:36.954 DEBUG 8600 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:15:36.954 DEBUG 8600 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:15:36.954 DEBUG 8600 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2cdf8d8a ...
+2022-11-22 23:15:36.954 DEBUG 8600 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:15:36.954 DEBUG 8600 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:15:36.955 DEBUG 8600 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2cdf8d8a ...
+2022-11-22 23:15:36.956 DEBUG 8600 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:15:36.957 DEBUG 8600 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:15:36.958 DEBUG 8600 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:15:36.958 DEBUG 8600 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:15:36.960 DEBUG 8600 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database_auth.sql
+2022-11-22 23:15:36.961 DEBUG 8600 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:15:36.964 DEBUG 8600 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database_auth.sql
+2022-11-22 23:15:37.170  WARN 8600 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+2022-11-22 23:15:37.181  INFO 8600 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-22 23:15:37.222 ERROR 8600 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.flywaydb.core.internal.database.DatabaseTypeRegister.getDatabaseTypeForConnection(DatabaseTypeRegister.java:106)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 84 common frames omitted
+
+2022-11-22 23:15:37.224 ERROR 8600 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@312ab28e] to prepare test instance [com.softlaboratory.hafyapi.ApplicationTests@216372b7]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	... 67 common frames omitted
+Caused by: org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.flywaydb.core.internal.database.DatabaseTypeRegister.getDatabaseTypeForConnection(DatabaseTypeRegister.java:106)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 84 common frames omitted
+
+2022-11-22 23:20:02.368  INFO 16876 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:20:02.412  INFO 16876 --- [main] com.softlaboratory.hafyapi.Application   : Starting Application using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 16876 (C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:20:02.415 DEBUG 16876 --- [main] com.softlaboratory.hafyapi.Application   : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:20:02.416  INFO 16876 --- [main] com.softlaboratory.hafyapi.Application   : The following 1 profile is active: "prod"
+2022-11-22 23:20:03.554  INFO 16876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:20:03.557  INFO 16876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:20:03.689  INFO 16876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:20:03.736  INFO 16876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:20:03.737  INFO 16876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:20:03.759  INFO 16876 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:20:03.761  INFO 16876 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:20:03.762  INFO 16876 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:20:03.764  INFO 16876 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:20:03.764  INFO 16876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:20:05.188  INFO 16876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5001 (http)
+2022-11-22 23:20:05.201  INFO 16876 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:20:05.202  INFO 16876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-22 23:20:05.202  INFO 16876 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-22 23:20:05.561  INFO 16876 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-11-22 23:20:05.562  INFO 16876 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3072 ms
+2022-11-22 23:20:05.791  INFO 16876 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:20:05.791  INFO 16876 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:20:05.791  INFO 16876 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:20:05.794 DEBUG 16876 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:20:05.795 DEBUG 16876 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:20:05.796 DEBUG 16876 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:20:05.796 DEBUG 16876 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:20:05.796 DEBUG 16876 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:20:05.796 DEBUG 16876 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:20:05.797 DEBUG 16876 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:20:05.797 DEBUG 16876 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:20:05.797 DEBUG 16876 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:20:05.800 DEBUG 16876 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:20:05.800 DEBUG 16876 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:20:05.803 DEBUG 16876 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database_auth.sql
+2022-11-22 23:20:05.803 DEBUG 16876 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:20:05.808 DEBUG 16876 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database_auth.sql
+2022-11-22 23:20:06.048  WARN 16876 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+2022-11-22 23:20:06.055  INFO 16876 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-22 23:20:06.104  INFO 16876 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-22 23:20:06.140 ERROR 16876 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.softlaboratory.hafyapi.Application.main(Application.java:10)
+Caused by: org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 5.5
+	at org.flywaydb.core.internal.database.DatabaseTypeRegister.getDatabaseTypeForConnection(DatabaseTypeRegister.java:106)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+
+2022-11-22 23:23:36.808  INFO 13820 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:23:36.838  INFO 13820 --- [main] com.softlaboratory.hafyapi.Application   : Starting Application using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 13820 (C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:23:36.839 DEBUG 13820 --- [main] com.softlaboratory.hafyapi.Application   : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:23:36.840  INFO 13820 --- [main] com.softlaboratory.hafyapi.Application   : The following 1 profile is active: "prod"
+2022-11-22 23:23:37.848  INFO 13820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:23:37.851  INFO 13820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:23:37.990  INFO 13820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:23:38.037  INFO 13820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:23:38.038  INFO 13820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:23:38.059  INFO 13820 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:23:38.061  INFO 13820 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:23:38.062  INFO 13820 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:23:38.065  INFO 13820 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:23:38.065  INFO 13820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:23:39.247  INFO 13820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5001 (http)
+2022-11-22 23:23:39.260  INFO 13820 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:23:39.261  INFO 13820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-22 23:23:39.261  INFO 13820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-22 23:23:39.614  INFO 13820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-11-22 23:23:39.614  INFO 13820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2714 ms
+2022-11-22 23:23:39.972  INFO 13820 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:23:39.973  INFO 13820 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:23:39.973  INFO 13820 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:23:39.975 DEBUG 13820 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:23:39.977 DEBUG 13820 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:23:39.978 DEBUG 13820 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:23:39.978 DEBUG 13820 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:23:39.978 DEBUG 13820 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:23:39.978 DEBUG 13820 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:23:39.978 DEBUG 13820 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:23:39.979 DEBUG 13820 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:23:39.979 DEBUG 13820 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:23:39.982 DEBUG 13820 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:23:39.982 DEBUG 13820 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:23:39.985 DEBUG 13820 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database.sql
+2022-11-22 23:23:39.986 DEBUG 13820 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database_auth.sql
+2022-11-22 23:23:39.986 DEBUG 13820 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:23:39.992 DEBUG 13820 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database_auth.sql
+2022-11-22 23:23:39.995 DEBUG 13820 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database.sql
+2022-11-22 23:23:40.327  INFO 13820 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/db_hafy (MySQL 5.5)
+2022-11-22 23:23:40.327 DEBUG 13820 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Driver  : MySQL Connector/J mysql-connector-j-8.0.31 (Revision: 0c86fc148d567b62266c2302bdad0f1e7a7e4eba)
+2022-11-22 23:23:40.386 DEBUG 13820 --- [main] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: false
+2022-11-22 23:23:40.390 DEBUG 13820 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2022-11-22 23:23:40.390 DEBUG 13820 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2022-11-22 23:23:40.406 DEBUG 13820 --- [main] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2022-11-22 23:23:40.418 DEBUG 13820 --- [main] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2022-11-22 23:23:40.439 DEBUG 13820 --- [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1_0__initial_database_auth.sql (filename: V1_0__initial_database_auth.sql)
+2022-11-22 23:23:40.439 DEBUG 13820 --- [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1_0__initial_database.sql (filename: V1_0__initial_database.sql)
+2022-11-22 23:23:40.442 DEBUG 13820 --- [main] o.f.c.i.j.TransactionalExecutionTemplate : Rolling back transaction...
+2022-11-22 23:23:40.443 DEBUG 13820 --- [main] o.f.c.i.j.TransactionalExecutionTemplate : Transaction rolled back
+2022-11-22 23:23:40.457 DEBUG 13820 --- [main] org.flywaydb.core.FlywayExecutor         : Memory usage: 60 of 152M
+2022-11-22 23:23:40.458  WARN 13820 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.0
+Offenders:
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database.sql (SQL)
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database_auth.sql (SQL)
+2022-11-22 23:23:40.463  INFO 13820 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-22 23:23:40.483  INFO 13820 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-22 23:23:40.510 ERROR 13820 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.0
+Offenders:
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database.sql (SQL)
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database_auth.sql (SQL)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.softlaboratory.hafyapi.Application.main(Application.java:10)
+Caused by: org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.0
+Offenders:
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database.sql (SQL)
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database_auth.sql (SQL)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.checkForIncompatibilities(CompositeMigrationResolver.java:131)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.doFindAvailableMigrations(CompositeMigrationResolver.java:93)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.resolveMigrations(CompositeMigrationResolver.java:83)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.resolveMigrations(CompositeMigrationResolver.java:41)
+	at org.flywaydb.core.internal.info.MigrationInfoServiceImpl.refresh(MigrationInfoServiceImpl.java:92)
+	at org.flywaydb.core.internal.command.DbValidate$2.call(DbValidate.java:151)
+	at org.flywaydb.core.internal.command.DbValidate$2.call(DbValidate.java:138)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbValidate.validate(DbValidate.java:138)
+	at org.flywaydb.core.Flyway.doValidate(Flyway.java:372)
+	at org.flywaydb.core.Flyway.access$100(Flyway.java:56)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:128)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:124)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:205)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+
+2022-11-22 23:24:27.474  INFO 1300 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:24:27.507  INFO 1300 --- [main] com.softlaboratory.hafyapi.Application   : Starting Application using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 1300 (C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:24:27.508 DEBUG 1300 --- [main] com.softlaboratory.hafyapi.Application   : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:24:27.509  INFO 1300 --- [main] com.softlaboratory.hafyapi.Application   : The following 1 profile is active: "prod"
+2022-11-22 23:24:28.524  INFO 1300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:24:28.528  INFO 1300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:24:28.658  INFO 1300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:24:28.699  INFO 1300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:24:28.699  INFO 1300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:24:28.716  INFO 1300 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:24:28.718  INFO 1300 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:24:28.718  INFO 1300 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:24:28.719  INFO 1300 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:24:28.719  INFO 1300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:24:29.924  INFO 1300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5001 (http)
+2022-11-22 23:24:29.936  INFO 1300 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:24:29.937  INFO 1300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-22 23:24:29.937  INFO 1300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-22 23:24:30.303  INFO 1300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-11-22 23:24:30.304  INFO 1300 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2739 ms
+2022-11-22 23:24:30.577  INFO 1300 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:24:30.578  INFO 1300 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:24:30.578  INFO 1300 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:24:30.580 DEBUG 1300 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:24:30.581 DEBUG 1300 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:24:30.581 DEBUG 1300 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:24:30.581 DEBUG 1300 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:24:30.581 DEBUG 1300 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:24:30.582 DEBUG 1300 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:24:30.582 DEBUG 1300 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:24:30.582 DEBUG 1300 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:24:30.583 DEBUG 1300 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:24:30.584 DEBUG 1300 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:24:30.585 DEBUG 1300 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:24:30.587 DEBUG 1300 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database.sql
+2022-11-22 23:24:30.587 DEBUG 1300 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database_auth.sql
+2022-11-22 23:24:30.587 DEBUG 1300 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:24:30.592 DEBUG 1300 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database_auth.sql
+2022-11-22 23:24:30.594 DEBUG 1300 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database.sql
+2022-11-22 23:24:30.827  INFO 1300 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/db_hafy (MySQL 5.5)
+2022-11-22 23:24:30.827 DEBUG 1300 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Driver  : MySQL Connector/J mysql-connector-j-8.0.31 (Revision: 0c86fc148d567b62266c2302bdad0f1e7a7e4eba)
+2022-11-22 23:24:30.883 DEBUG 1300 --- [main] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: false
+2022-11-22 23:24:30.886 DEBUG 1300 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2022-11-22 23:24:30.887 DEBUG 1300 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2022-11-22 23:24:30.900 DEBUG 1300 --- [main] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2022-11-22 23:24:30.907 DEBUG 1300 --- [main] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2022-11-22 23:24:30.921 DEBUG 1300 --- [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1_0__initial_database_auth.sql (filename: V1_0__initial_database_auth.sql)
+2022-11-22 23:24:30.922 DEBUG 1300 --- [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1_0__initial_database.sql (filename: V1_0__initial_database.sql)
+2022-11-22 23:24:30.923 DEBUG 1300 --- [main] o.f.c.i.j.TransactionalExecutionTemplate : Rolling back transaction...
+2022-11-22 23:24:30.924 DEBUG 1300 --- [main] o.f.c.i.j.TransactionalExecutionTemplate : Transaction rolled back
+2022-11-22 23:24:30.933 DEBUG 1300 --- [main] org.flywaydb.core.FlywayExecutor         : Memory usage: 76 of 152M
+2022-11-22 23:24:30.934  WARN 1300 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.0
+Offenders:
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database_auth.sql (SQL)
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database.sql (SQL)
+2022-11-22 23:24:30.937  INFO 1300 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-22 23:24:30.956  INFO 1300 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-22 23:24:30.978 ERROR 1300 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.0
+Offenders:
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database_auth.sql (SQL)
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database.sql (SQL)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.softlaboratory.hafyapi.Application.main(Application.java:10)
+Caused by: org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.0
+Offenders:
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database_auth.sql (SQL)
+-> C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration\V1_0__initial_database.sql (SQL)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.checkForIncompatibilities(CompositeMigrationResolver.java:131)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.doFindAvailableMigrations(CompositeMigrationResolver.java:93)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.resolveMigrations(CompositeMigrationResolver.java:83)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.resolveMigrations(CompositeMigrationResolver.java:41)
+	at org.flywaydb.core.internal.info.MigrationInfoServiceImpl.refresh(MigrationInfoServiceImpl.java:92)
+	at org.flywaydb.core.internal.command.DbValidate$2.call(DbValidate.java:151)
+	at org.flywaydb.core.internal.command.DbValidate$2.call(DbValidate.java:138)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbValidate.validate(DbValidate.java:138)
+	at org.flywaydb.core.Flyway.doValidate(Flyway.java:372)
+	at org.flywaydb.core.Flyway.access$100(Flyway.java:56)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:128)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:124)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:205)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+
+2022-11-22 23:25:24.367  INFO 12280 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 6.2.5.Final
+2022-11-22 23:25:24.412  INFO 12280 --- [main] com.softlaboratory.hafyapi.Application   : Starting Application using Java 11.0.6 on LAPTOP-QERJ3GV7 with PID 12280 (C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes started by wahyu in C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api)
+2022-11-22 23:25:24.414 DEBUG 12280 --- [main] com.softlaboratory.hafyapi.Application   : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-22 23:25:24.414  INFO 12280 --- [main] com.softlaboratory.hafyapi.Application   : The following 1 profile is active: "prod"
+2022-11-22 23:25:25.450  INFO 12280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:25:25.454  INFO 12280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-22 23:25:25.594  INFO 12280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 4 JPA repository interfaces.
+2022-11-22 23:25:25.633  INFO 12280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-11-22 23:25:25.633  INFO 12280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-11-22 23:25:25.650  INFO 12280 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.AccountRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:25:25.651  INFO 12280 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:25:25.653  INFO 12280 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:25:25.654  INFO 12280 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.softlaboratory.hafyapi.repository.TypeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2022-11-22 23:25:25.655  INFO 12280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 MongoDB repository interfaces.
+2022-11-22 23:25:26.865  INFO 12280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5001 (http)
+2022-11-22 23:25:26.880  INFO 12280 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:25:26.881  INFO 12280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-22 23:25:26.881  INFO 12280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-22 23:25:27.255  INFO 12280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-11-22 23:25:27.256  INFO 12280 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2782 ms
+2022-11-22 23:25:27.509  INFO 12280 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-22 23:25:27.510  INFO 12280 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-22 23:25:27.510  INFO 12280 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-22 23:25:27.513 DEBUG 12280 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2022-11-22 23:25:27.514 DEBUG 12280 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2022-11-22 23:25:27.515 DEBUG 12280 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2022-11-22 23:25:27.515 DEBUG 12280 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:25:27.515 DEBUG 12280 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2022-11-22 23:25:27.516 DEBUG 12280 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2022-11-22 23:25:27.516 DEBUG 12280 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 ...
+2022-11-22 23:25:27.516 DEBUG 12280 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/wahyu/Documents/Kuliah/Final%20Project/hafy-api/target/classes/db/migration
+2022-11-22 23:25:27.517 DEBUG 12280 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2022-11-22 23:25:27.521 DEBUG 12280 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\
+2022-11-22 23:25:27.521 DEBUG 12280 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\wahyu\Documents\Kuliah\Final Project\hafy-api\target\classes\db\migration (db/migration)
+2022-11-22 23:25:27.523 DEBUG 12280 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1_0__initial_database.sql
+2022-11-22 23:25:27.524 DEBUG 12280 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2022-11-22 23:25:27.528 DEBUG 12280 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1_0__initial_database.sql
+2022-11-22 23:25:27.799  INFO 12280 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/db_hafy (MySQL 5.5)
+2022-11-22 23:25:27.800 DEBUG 12280 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Driver  : MySQL Connector/J mysql-connector-j-8.0.31 (Revision: 0c86fc148d567b62266c2302bdad0f1e7a7e4eba)
+2022-11-22 23:25:27.850 DEBUG 12280 --- [main] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: false
+2022-11-22 23:25:27.851 DEBUG 12280 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2022-11-22 23:25:27.852 DEBUG 12280 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2022-11-22 23:25:27.860 DEBUG 12280 --- [main] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2022-11-22 23:25:27.866 DEBUG 12280 --- [main] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2022-11-22 23:25:27.877 DEBUG 12280 --- [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1_0__initial_database.sql (filename: V1_0__initial_database.sql)
+2022-11-22 23:25:27.887  INFO 12280 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.019s)
+2022-11-22 23:25:27.905 DEBUG 12280 --- [main] o.f.core.internal.command.DbSchemas      : Skipping creation of existing schema: `db_hafy`
+2022-11-22 23:25:27.910  INFO 12280 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `db_hafy`.`flyway_schema_history` ...
+2022-11-22 23:25:27.915 DEBUG 12280 --- [main] o.flywaydb.core.internal.parser.Parser   : Parsing  ...
+2022-11-22 23:25:27.925 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 1: CREATE TABLE `db_hafy`.`flyway_schema_history` (
+    `installed_rank` INT NOT NULL,
+    `version` VARCHAR(50),
+    `description` VARCHAR(200) NOT NULL,
+    `type` VARCHAR(20) NOT NULL,
+    `script` VARCHAR(1000) NOT NULL,
+    `checksum` INT,
+    `installed_by` VARCHAR(100) NOT NULL,
+    `installed_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `execution_time` INT NOT NULL,
+    `success` BOOL NOT NULL,
+    CONSTRAINT  PRIMARY KEY (`installed_rank`)
+) ENGINE=InnoDB
+2022-11-22 23:25:27.925 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 14: CREATE INDEX `flyway_schema_history_s_idx` ON `db_hafy`.`flyway_schema_history` (`success`)
+2022-11-22 23:25:27.926 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE `db_hafy`.`flyway_schema_history` (
+    `installed_rank` INT NOT NULL,
+    `version` VARCHAR(50),
+    `description` VARCHAR(200) NOT NULL,
+    `type` VARCHAR(20) NOT NULL,
+    `script` VARCHAR(1000) NOT NULL,
+    `checksum` INT,
+    `installed_by` VARCHAR(100) NOT NULL,
+    `installed_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `execution_time` INT NOT NULL,
+    `success` BOOL NOT NULL,
+    CONSTRAINT  PRIMARY KEY (`installed_rank`)
+) ENGINE=InnoDB
+2022-11-22 23:25:27.947 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:27.947 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE INDEX `flyway_schema_history_s_idx` ON `db_hafy`.`flyway_schema_history` (`success`)
+2022-11-22 23:25:27.963 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:27.963 DEBUG 12280 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Created Schema History table `db_hafy`.`flyway_schema_history`
+2022-11-22 23:25:27.978  INFO 12280 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_hafy`: << Empty Schema >>
+2022-11-22 23:25:27.979 DEBUG 12280 --- [main] o.flywaydb.core.internal.parser.Parser   : Parsing V1_0__initial_database.sql ...
+2022-11-22 23:25:27.982 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 1: CREATE TABLE t_account_role (
+  id BIGINT AUTO_INCREMENT NOT NULL,
+   is_deleted BIT(1) NULL,
+   deleted_at datetime NULL,
+   created_at datetime NOT NULL,
+   created_by VARCHAR(50) NOT NULL,
+   updated_at datetime NULL,
+   updated_by VARCHAR(50) NULL,
+   `role` INT NOT NULL,
+   CONSTRAINT pk_t_account_role PRIMARY KEY (id)
+)
+2022-11-22 23:25:27.984 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 13: CREATE TABLE t_account_type (
+  id BIGINT AUTO_INCREMENT NOT NULL,
+   is_deleted BIT(1) NULL,
+   deleted_at datetime NULL,
+   created_at datetime NOT NULL,
+   created_by VARCHAR(50) NOT NULL,
+   updated_at datetime NULL,
+   updated_by VARCHAR(50) NULL,
+   type INT NOT NULL,
+   CONSTRAINT pk_t_account_type PRIMARY KEY (id)
+)
+2022-11-22 23:25:27.985 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 25: CREATE TABLE t_account_profile (
+  id BIGINT AUTO_INCREMENT NOT NULL,
+   is_deleted BIT(1) NULL,
+   deleted_at datetime NULL,
+   created_at datetime NOT NULL,
+   created_by VARCHAR(50) NOT NULL,
+   updated_at datetime NULL,
+   updated_by VARCHAR(50) NULL,
+   fullname VARCHAR(50) NOT NULL,
+   email VARCHAR(50) NULL,
+   phone_number VARCHAR(15) NULL,
+   address TEXT NULL,
+   birth_place VARCHAR(20) NULL,
+   birth_date date NULL,
+   CONSTRAINT pk_t_account_profile PRIMARY KEY (id)
+)
+2022-11-22 23:25:27.985 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 42: ALTER TABLE t_account_profile ADD CONSTRAINT uc_t_account_profile_email UNIQUE (email)
+2022-11-22 23:25:27.987 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 44: ALTER TABLE t_account_profile ADD CONSTRAINT uc_t_account_profile_phone_number UNIQUE (phone_number)
+2022-11-22 23:25:27.987 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 46: CREATE TABLE t_account_master (
+  id BIGINT AUTO_INCREMENT NOT NULL,
+   is_deleted BIT(1) NULL,
+   deleted_at datetime NULL,
+   created_at datetime NOT NULL,
+   created_by VARCHAR(50) NOT NULL,
+   updated_at datetime NULL,
+   updated_by VARCHAR(50) NULL,
+   username VARCHAR(30) NOT NULL,
+   password VARCHAR(100) NOT NULL,
+   active BIT(1) DEFAULT 1 NOT NULL,
+   id_profile BIGINT NOT NULL,
+   CONSTRAINT pk_t_account_master PRIMARY KEY (id)
+)
+2022-11-22 23:25:27.988 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 61: ALTER TABLE t_account_master ADD CONSTRAINT uc_t_account_master_username UNIQUE (username)
+2022-11-22 23:25:27.988 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 63: ALTER TABLE t_account_master ADD CONSTRAINT FK_T_ACCOUNT_MASTER_ON_ID_PROFILE FOREIGN KEY (id_profile) REFERENCES t_account_profile (id)
+2022-11-22 23:25:27.989 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 65: CREATE TABLE bt_account_types (
+  id_account BIGINT NOT NULL,
+   id_type BIGINT NOT NULL
+)
+2022-11-22 23:25:27.989 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 70: ALTER TABLE bt_account_types ADD CONSTRAINT uc_bt_account_types_id_type UNIQUE (id_type)
+2022-11-22 23:25:27.990 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 72: ALTER TABLE bt_account_types ADD CONSTRAINT fk_btacctyp_on_account_dao FOREIGN KEY (id_account) REFERENCES t_account_master (id)
+2022-11-22 23:25:27.990 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 74: ALTER TABLE bt_account_types ADD CONSTRAINT fk_btacctyp_on_type_dao FOREIGN KEY (id_type) REFERENCES t_account_type (id)
+2022-11-22 23:25:27.990 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 76: CREATE TABLE bt_account_roles (
+  id_account BIGINT NOT NULL,
+   id_role BIGINT NOT NULL
+)
+2022-11-22 23:25:27.992 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 81: ALTER TABLE bt_account_roles ADD CONSTRAINT uc_bt_account_roles_id_role UNIQUE (id_role)
+2022-11-22 23:25:27.992 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 83: ALTER TABLE bt_account_roles ADD CONSTRAINT fk_btaccrol_on_account_dao FOREIGN KEY (id_account) REFERENCES t_account_master (id)
+2022-11-22 23:25:27.992 DEBUG 12280 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 85: ALTER TABLE bt_account_roles ADD CONSTRAINT fk_btaccrol_on_role_dao FOREIGN KEY (id_role) REFERENCES t_account_role (id)
+2022-11-22 23:25:27.995 DEBUG 12280 --- [main] o.f.core.internal.command.DbMigrate      : Starting migration of schema `db_hafy` to version "1.0 - initial database" ...
+2022-11-22 23:25:27.998  INFO 12280 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_hafy` to version "1.0 - initial database"
+2022-11-22 23:25:27.999 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE t_account_role (
+  id BIGINT AUTO_INCREMENT NOT NULL,
+   is_deleted BIT(1) NULL,
+   deleted_at datetime NULL,
+   created_at datetime NOT NULL,
+   created_by VARCHAR(50) NOT NULL,
+   updated_at datetime NULL,
+   updated_by VARCHAR(50) NULL,
+   `role` INT NOT NULL,
+   CONSTRAINT pk_t_account_role PRIMARY KEY (id)
+)
+2022-11-22 23:25:28.028  WARN 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Name 'pk_t_account_role' ignored for PRIMARY key. (SQL State: 42000 - Error Code: 1280)
+2022-11-22 23:25:28.029 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.029 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE t_account_type (
+  id BIGINT AUTO_INCREMENT NOT NULL,
+   is_deleted BIT(1) NULL,
+   deleted_at datetime NULL,
+   created_at datetime NOT NULL,
+   created_by VARCHAR(50) NOT NULL,
+   updated_at datetime NULL,
+   updated_by VARCHAR(50) NULL,
+   type INT NOT NULL,
+   CONSTRAINT pk_t_account_type PRIMARY KEY (id)
+)
+2022-11-22 23:25:28.043  WARN 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Name 'pk_t_account_type' ignored for PRIMARY key. (SQL State: 42000 - Error Code: 1280)
+2022-11-22 23:25:28.043 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.043 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE t_account_profile (
+  id BIGINT AUTO_INCREMENT NOT NULL,
+   is_deleted BIT(1) NULL,
+   deleted_at datetime NULL,
+   created_at datetime NOT NULL,
+   created_by VARCHAR(50) NOT NULL,
+   updated_at datetime NULL,
+   updated_by VARCHAR(50) NULL,
+   fullname VARCHAR(50) NOT NULL,
+   email VARCHAR(50) NULL,
+   phone_number VARCHAR(15) NULL,
+   address TEXT NULL,
+   birth_place VARCHAR(20) NULL,
+   birth_date date NULL,
+   CONSTRAINT pk_t_account_profile PRIMARY KEY (id)
+)
+2022-11-22 23:25:28.059  WARN 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Name 'pk_t_account_profile' ignored for PRIMARY key. (SQL State: 42000 - Error Code: 1280)
+2022-11-22 23:25:28.059 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.059 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE t_account_profile ADD CONSTRAINT uc_t_account_profile_email UNIQUE (email)
+2022-11-22 23:25:28.076 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.077 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE t_account_profile ADD CONSTRAINT uc_t_account_profile_phone_number UNIQUE (phone_number)
+2022-11-22 23:25:28.088 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.088 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE t_account_master (
+  id BIGINT AUTO_INCREMENT NOT NULL,
+   is_deleted BIT(1) NULL,
+   deleted_at datetime NULL,
+   created_at datetime NOT NULL,
+   created_by VARCHAR(50) NOT NULL,
+   updated_at datetime NULL,
+   updated_by VARCHAR(50) NULL,
+   username VARCHAR(30) NOT NULL,
+   password VARCHAR(100) NOT NULL,
+   active BIT(1) DEFAULT 1 NOT NULL,
+   id_profile BIGINT NOT NULL,
+   CONSTRAINT pk_t_account_master PRIMARY KEY (id)
+)
+2022-11-22 23:25:28.102  WARN 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Name 'pk_t_account_master' ignored for PRIMARY key. (SQL State: 42000 - Error Code: 1280)
+2022-11-22 23:25:28.103 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.104 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE t_account_master ADD CONSTRAINT uc_t_account_master_username UNIQUE (username)
+2022-11-22 23:25:28.131 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.131 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE t_account_master ADD CONSTRAINT FK_T_ACCOUNT_MASTER_ON_ID_PROFILE FOREIGN KEY (id_profile) REFERENCES t_account_profile (id)
+2022-11-22 23:25:28.159 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.159 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE bt_account_types (
+  id_account BIGINT NOT NULL,
+   id_type BIGINT NOT NULL
+)
+2022-11-22 23:25:28.168 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.168 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE bt_account_types ADD CONSTRAINT uc_bt_account_types_id_type UNIQUE (id_type)
+2022-11-22 23:25:28.190 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.190 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE bt_account_types ADD CONSTRAINT fk_btacctyp_on_account_dao FOREIGN KEY (id_account) REFERENCES t_account_master (id)
+2022-11-22 23:25:28.218 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.218 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE bt_account_types ADD CONSTRAINT fk_btacctyp_on_type_dao FOREIGN KEY (id_type) REFERENCES t_account_type (id)
+2022-11-22 23:25:28.248 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.248 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE bt_account_roles (
+  id_account BIGINT NOT NULL,
+   id_role BIGINT NOT NULL
+)
+2022-11-22 23:25:28.259 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.259 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE bt_account_roles ADD CONSTRAINT uc_bt_account_roles_id_role UNIQUE (id_role)
+2022-11-22 23:25:28.283 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.283 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE bt_account_roles ADD CONSTRAINT fk_btaccrol_on_account_dao FOREIGN KEY (id_account) REFERENCES t_account_master (id)
+2022-11-22 23:25:28.312 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.313 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE bt_account_roles ADD CONSTRAINT fk_btaccrol_on_role_dao FOREIGN KEY (id_role) REFERENCES t_account_role (id)
+2022-11-22 23:25:28.346 DEBUG 12280 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+2022-11-22 23:25:28.346 DEBUG 12280 --- [main] o.f.core.internal.command.DbMigrate      : Successfully completed migration of schema `db_hafy` to version "1.0 - initial database"
+2022-11-22 23:25:28.356 DEBUG 12280 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema History table `db_hafy`.`flyway_schema_history` successfully updated to reflect changes
+2022-11-22 23:25:28.368  INFO 12280 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `db_hafy`, now at version v1.0 (execution time 00:00.396s)
+2022-11-22 23:25:28.378 DEBUG 12280 --- [main] org.flywaydb.core.FlywayExecutor         : Memory usage: 68 of 152M
+2022-11-22 23:25:28.556  INFO 12280 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-22 23:25:28.632  INFO 12280 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-22 23:25:28.841  INFO 12280 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-22 23:25:28.955  INFO 12280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-22 23:25:28.976  INFO 12280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-22 23:25:28.994  INFO 12280 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+2022-11-22 23:25:29.729  INFO 12280 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-22 23:25:29.737  INFO 12280 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-22 23:25:29.930  WARN 12280 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-22 23:25:30.140  INFO 12280 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b7c0f39, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25b402ea, org.springframework.security.web.context.SecurityContextPersistenceFilter@518a7b8a, org.springframework.security.web.header.HeaderWriterFilter@4bc41565, org.springframework.web.filter.CorsFilter@2fccd98f, org.springframework.security.web.authentication.logout.LogoutFilter@3465edf9, com.softlaboratory.hafyapi.security.JwtAuthenticationFilter@309e7215, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1055d261, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7253c53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31fc658f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b30b6f8, org.springframework.security.web.session.SessionManagementFilter@570b85dd, org.springframework.security.web.access.ExceptionTranslationFilter@6219006a, org.springframework.security.web.access.intercept.AuthorizationFilter@78b2d29e]
+2022-11-22 23:25:30.713  WARN 12280 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/api/h2-ui/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-11-22 23:25:30.713  INFO 12280 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/api/h2-ui/**']
+2022-11-22 23:25:31.057  INFO 12280 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.6+8-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@d15f031]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2022-11-22 23:25:31.333  INFO 12280 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-5001"]
+2022-11-22 23:25:31.357  INFO 12280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5001 (http) with context path '/api'
+2022-11-22 23:25:31.364  INFO 12280 --- [main] com.softlaboratory.hafyapi.Application   : Started Application in 7.735 seconds (JVM running for 8.412)
+2022-11-22 23:25:33.093  INFO 12280 --- [cluster-ClusterId{value='637cf7fac955ee23ad3a3c99', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+

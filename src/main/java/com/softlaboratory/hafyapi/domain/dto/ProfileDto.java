@@ -1,4 +1,4 @@
-package com.softlaboratory.hafyapi.config.domain.dto;
+package com.softlaboratory.hafyapi.domain.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
