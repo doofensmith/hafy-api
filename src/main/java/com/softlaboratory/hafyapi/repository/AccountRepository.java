@@ -13,4 +13,6 @@ public interface AccountRepository extends JpaRepository<AccountDao, Long> {
     @Query("select a from AccountDao a where upper(a.username) = upper(?1)")
     Optional<AccountDao> findByUsername(String username);
 
+    AccountDao getDistinctTopByUsername(String username);
+
 }

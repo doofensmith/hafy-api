@@ -18,9 +18,9 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<AccountDao> account = repository.findByUsername(username);
-        if (account.isPresent()) {
-            return account.get();
+        AccountDao account = repository.getDistinctTopByUsername(username);
+        if (account != null) {
+            return account;
         }else {
             throw new UsernameNotFoundException("Username not found.");
         }

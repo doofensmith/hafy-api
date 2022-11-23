@@ -82,11 +82,7 @@ public class AuthServiceImpl implements AuthService {
 
             log.info("Login success.");
             return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), loginResponse);
-        }catch (BadCredentialsException e) {
-            throw e;
-        }catch (UsernameNotFoundException e) {
-            throw e;
-        }catch (Exception e) {
+        } catch (Exception e) {
             throw e;
         }
     }

@@ -28,9 +28,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfiguration {
 
-    @Autowired
-    private UnauthorizedEntryPoint unauthorizedEntryPoint;
-
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, JwtTokenProvider tokenProvider) throws Exception {
         http.httpBasic().and().cors().and().csrf().disable()
@@ -38,7 +35,6 @@ public class SecurityConfig extends WebSecurityConfiguration {
                 .antMatchers("/auth/**").permitAll()
                 .antMatchers("/h2-ui/**").permitAll()
                 .anyRequest().authenticated().and()
-                .exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
