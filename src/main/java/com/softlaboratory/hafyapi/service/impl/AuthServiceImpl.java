@@ -21,14 +21,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Log4j2
 @Service
@@ -57,23 +59,36 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public ResponseEntity<Object> login(LoginRequest request) {
-        log.info("Starting account login.");
+        try {
+            log.info("Starting account login.");
 
-        log.debug("Login request : {}", request);
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
-        );
+            log.debug("Login request : {}", request);
+            Optional<AccountDao> account = accountRepository.findByUsername(request.getUsername());
+            if (account.isPresent() && !passwordEncoder.matches(request.getPassword(), account.get().getPassword())) {
+                throw new BadCredentialsException("Wrong password!");
+            }
 
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        String jwt = tokenProvider.generateToken(authentication);
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
+            );
 
-        log.debug("Converting login response.");
-        LoginResponse loginResponse = LoginResponse.builder()
-                .token(jwt)
-                .build();
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+            String jwt = tokenProvider.generateToken(authentication);
 
-        log.info("Login success.");
-        return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), loginResponse);
+            log.debug("Converting login response.");
+            LoginResponse loginResponse = LoginResponse.builder()
+                    .token(jwt)
+                    .build();
+
+            log.info("Login success.");
+            return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), loginResponse);
+        }catch (BadCredentialsException e) {
+            throw e;
+        }catch (UsernameNotFoundException e) {
+            throw e;
+        }catch (Exception e) {
+            throw e;
+        }
     }
 
     @Override
@@ -86,10 +101,10 @@ public class AuthServiceImpl implements AuthService {
         //BASE ACCOUNT ROLE AND TYPE
         RoleDao role = roleRepository.findByRoleEquals(RoleEnum.USER);
         TypeDao type = typeRepository.findByTypeEquals(AccountTypeEnum.CUSTOMER);
-        List<RoleDao> roleList = new ArrayList<>();
-        roleList.add(role);
-        List<TypeDao> typeList = new ArrayList<>();
-        typeList.add(type);
+//        List<RoleDao> roleList = new ArrayList<>();
+//        roleList.add(role);
+//        List<TypeDao> typeList = new ArrayList<>();
+//        typeList.add(type);
 
         log.debug("Save profile with repository.");
         ProfileDao profileDao = ProfileDao.builder()
@@ -103,8 +118,8 @@ public class AuthServiceImpl implements AuthService {
                 .username(request.getUsername())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .isActive(true)
-                .roles(roleList)
-                .types(typeList)
+                .roles(List.of(role))
+                .types(List.of(type))
                 .build();
         account = accountRepository.save(account);
 

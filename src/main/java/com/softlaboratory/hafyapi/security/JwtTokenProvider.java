@@ -70,7 +70,7 @@ public class JwtTokenProvider implements Serializable {
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
 
-        return new UsernamePasswordAuthenticationToken(userDetails, "", authorities);
+        return new UsernamePasswordAuthenticationToken(userDetails, userDetails.getPassword(), authorities);
     }
 
     public boolean isTokenValid(String token, UserDetails userDetails) {

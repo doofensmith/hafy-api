@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -52,7 +53,7 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
             joinColumns = @JoinColumn(name = "id_account"),
             inverseJoinColumns = @JoinColumn(name = "id_role")
     )
-    private List<RoleDao> roles;
+    private List<RoleDao> roles = new ArrayList<>();
 
     @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(
@@ -60,7 +61,7 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
             joinColumns = @JoinColumn(name = "id_account"),
             inverseJoinColumns = @JoinColumn(name = "id_type")
     )
-    private List<TypeDao> types;
+    private List<TypeDao> types = new ArrayList<>();
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

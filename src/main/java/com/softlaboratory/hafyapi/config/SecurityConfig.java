@@ -3,8 +3,10 @@ package com.softlaboratory.hafyapi.config;
 import com.softlaboratory.hafyapi.domain.dao.AccountDao;
 import com.softlaboratory.hafyapi.security.JwtAuthenticationFilter;
 import com.softlaboratory.hafyapi.security.JwtTokenProvider;
+import com.softlaboratory.hafyapi.security.UnauthorizedEntryPoint;
 import com.softlaboratory.hafyapi.service.AccountService;
 import com.softlaboratory.hafyapi.service.impl.AccountServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -27,13 +29,18 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfiguration {
 
+    @Autowired
+    private UnauthorizedEntryPoint unauthorizedEntryPoint;
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, JwtTokenProvider tokenProvider) throws Exception {
         http.httpBasic().and().cors().and().csrf().disable()
                 .authorizeHttpRequests()
                 .antMatchers("/auth/**").permitAll()
                 .antMatchers("/h2-ui/**").permitAll()
-                .anyRequest().authenticated().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .anyRequest().authenticated().and()
+                .exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint).and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
@@ -45,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfiguration {
             String password = authentication.getCredentials().toString();
             AccountDao account = (AccountDao) accountService.loadUserByUsername(username);
 
-            return new UsernamePasswordAuthenticationToken(username, "", account.getAuthorities());
+            return new UsernamePasswordAuthenticationToken(username, password, account.getAuthorities());
         };
     }
 

@@ -4,6 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 /dev
+/production
 /src/main/java/com/softlaboratory/hafyapi/config/InitialData.java
 
 ### STS ###
