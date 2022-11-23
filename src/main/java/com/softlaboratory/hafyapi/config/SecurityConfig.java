@@ -3,7 +3,6 @@ package com.softlaboratory.hafyapi.config;
 import com.softlaboratory.hafyapi.domain.dao.AccountDao;
 import com.softlaboratory.hafyapi.security.JwtAuthenticationFilter;
 import com.softlaboratory.hafyapi.security.JwtTokenProvider;
-import com.softlaboratory.hafyapi.security.UnauthorizedEntryPoint;
 import com.softlaboratory.hafyapi.service.AccountService;
 import com.softlaboratory.hafyapi.service.impl.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
