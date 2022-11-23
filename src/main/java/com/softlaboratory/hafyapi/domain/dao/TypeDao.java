@@ -1,7 +1,7 @@
-package com.softlaboratory.hafyapi.domain.dao;
+package com.softlaboratory.hafyapi.config.domain.dao;
 
 import com.softlaboratory.hafyapi.constant.enums.AccountTypeEnum;
-import com.softlaboratory.hafyapi.domain.common.BaseDaoSoftDelete;
+import com.softlaboratory.hafyapi.config.domain.common.BaseDaoSoftDelete;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

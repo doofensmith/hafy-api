@@ -1,7 +1,7 @@
-package com.softlaboratory.hafyapi.domain.dto;
+package com.softlaboratory.hafyapi.config.domain.dto;
 
+import com.softlaboratory.hafyapi.config.domain.dao.RoleDao;
 import com.softlaboratory.hafyapi.constant.enums.RoleEnum;
-import com.softlaboratory.hafyapi.domain.dao.RoleDao;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

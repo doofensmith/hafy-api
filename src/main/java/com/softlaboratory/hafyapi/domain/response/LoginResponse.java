@@ -1,4 +1,4 @@
-package com.softlaboratory.hafyapi.domain.response;
+package com.softlaboratory.hafyapi.config.domain.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

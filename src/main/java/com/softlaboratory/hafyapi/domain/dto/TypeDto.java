@@ -1,5 +1,6 @@
-package com.softlaboratory.hafyapi.domain.dto;
+package com.softlaboratory.hafyapi.config.domain.dto;
 
+import com.softlaboratory.hafyapi.config.domain.dao.TypeDao;
 import com.softlaboratory.hafyapi.constant.enums.AccountTypeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +10,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
- * A DTO for the {@link com.softlaboratory.hafyapi.domain.dao.TypeDao} entity
+ * A DTO for the {@link TypeDao} entity
  */
 
 @NoArgsConstructor
