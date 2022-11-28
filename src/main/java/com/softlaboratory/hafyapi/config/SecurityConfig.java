@@ -74,7 +74,9 @@ public class SecurityConfig extends WebSecurityConfiguration {
 
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
-        return web -> web.ignoring().antMatchers("/api/h2-ui/**");
+        return web -> web.ignoring()
+                .antMatchers("/api/h2-ui/**")
+                .antMatchers("/auth/**", "/error/**");
     }
 
 }

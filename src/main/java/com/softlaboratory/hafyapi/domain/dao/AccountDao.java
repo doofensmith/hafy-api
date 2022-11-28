@@ -47,7 +47,7 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
     @JoinColumn(name = "id_profile", nullable = false)
     private ProfileDao profile;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "bt_account_roles",
             joinColumns = @JoinColumn(name = "id_account"),
@@ -55,7 +55,7 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
     )
     private List<RoleDao> roles = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "bt_account_types",
             joinColumns = @JoinColumn(name = "id_account"),

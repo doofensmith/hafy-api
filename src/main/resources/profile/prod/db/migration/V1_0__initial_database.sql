@@ -62,24 +62,20 @@ ALTER TABLE t_account_master ADD CONSTRAINT uc_t_account_master_username UNIQUE 
 
 ALTER TABLE t_account_master ADD CONSTRAINT FK_T_ACCOUNT_MASTER_ON_ID_PROFILE FOREIGN KEY (id_profile) REFERENCES t_account_profile (id);
 
-CREATE TABLE bt_account_types (
-  id_account BIGINT NOT NULL,
-   id_type BIGINT NOT NULL
-);
-
-ALTER TABLE bt_account_types ADD CONSTRAINT uc_bt_account_types_id_type UNIQUE (id_type);
-
-ALTER TABLE bt_account_types ADD CONSTRAINT fk_btacctyp_on_account_dao FOREIGN KEY (id_account) REFERENCES t_account_master (id);
-
-ALTER TABLE bt_account_types ADD CONSTRAINT fk_btacctyp_on_type_dao FOREIGN KEY (id_type) REFERENCES t_account_type (id);
-
 CREATE TABLE bt_account_roles (
   id_account BIGINT NOT NULL,
-   id_role BIGINT NOT NULL
+   id_role BIGINT NULL
 );
-
-ALTER TABLE bt_account_roles ADD CONSTRAINT uc_bt_account_roles_id_role UNIQUE (id_role);
 
 ALTER TABLE bt_account_roles ADD CONSTRAINT fk_btaccrol_on_account_dao FOREIGN KEY (id_account) REFERENCES t_account_master (id);
 
 ALTER TABLE bt_account_roles ADD CONSTRAINT fk_btaccrol_on_role_dao FOREIGN KEY (id_role) REFERENCES t_account_role (id);
+
+CREATE TABLE bt_account_types (
+  id_account BIGINT NOT NULL,
+   id_type BIGINT NULL
+);
+
+ALTER TABLE bt_account_types ADD CONSTRAINT fk_btacctyp_on_account_dao FOREIGN KEY (id_account) REFERENCES t_account_master (id);
+
+ALTER TABLE bt_account_types ADD CONSTRAINT fk_btacctyp_on_type_dao FOREIGN KEY (id_type) REFERENCES t_account_type (id);
