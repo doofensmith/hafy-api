@@ -36,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfiguration {
                 .antMatchers("/h2-ui/**").permitAll()
                 .anyRequest().authenticated().and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.addFilterBefore(new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(new JwtAuthenticationFilter(userDetailsService(), tokenProvider), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
@@ -67,8 +67,9 @@ public class SecurityConfig extends WebSecurityConfiguration {
         };
     }
 
+
     @Bean
-    public UserDetailsService userDetailsService() {
+    public AccountService userDetailsService() {
         return new AccountServiceImpl();
     }
 

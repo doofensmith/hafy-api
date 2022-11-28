@@ -18,6 +18,7 @@ import com.softlaboratory.hafyapi.service.AuthService;
 import com.softlaboratory.hafyapi.util.ResponseUtil;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -93,6 +94,13 @@ public class AuthServiceImpl implements AuthService {
         log.info("Starting regiter account.");
 
         log.debug("Register request : {}", request);
+
+        log.debug("Check duplicate username with repository.");
+        Optional<AccountDao> accountDuplicate = accountRepository.findByUsername(request.getUsername());
+        if (accountDuplicate.isPresent()) {
+            log.debug("Register failed due to duplicate username.");
+            throw new DataIntegrityViolationException("Duplicate Username.");
+        }
 
         log.debug("Preparing new account.");
         //BASE ACCOUNT ROLE AND TYPE

@@ -2,6 +2,8 @@ package com.softlaboratory.hafyapi.security;
 
 import com.softlaboratory.hafyapi.constant.AppConstant;
 import com.softlaboratory.hafyapi.domain.dao.AccountDao;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.core.Authentication;
@@ -16,13 +18,11 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
+@AllArgsConstructor
 public class JwtAuthenticationFilter extends GenericFilterBean {
 
-    @Autowired
-    private UserDetailsService userDetailsService;
-
-    @Autowired
-    private JwtTokenProvider tokenProvider;
+    private final UserDetailsService userDetailsService;
+    private final JwtTokenProvider tokenProvider;
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {

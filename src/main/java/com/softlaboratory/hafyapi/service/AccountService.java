@@ -13,6 +13,7 @@ public interface AccountService extends UserDetailsService {
     ResponseEntity<Object> addType(Long id, AccountTypeEnum accountType);
     ResponseEntity<Object> removeRole(Long id, RoleEnum role);
     ResponseEntity<Object> removeType(Long id, AccountTypeEnum accountType);
+    ResponseEntity<Object> listUser();
     ResponseEntity<Object> setUserActive(Long id, Boolean userActive);
     ResponseEntity<Object> deleteUser(Long id);
 
