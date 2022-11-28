@@ -3,7 +3,6 @@ package com.softlaboratory.hafyapi.service.impl;
 import com.softlaboratory.hafyapi.constant.enums.AccountTypeEnum;
 import com.softlaboratory.hafyapi.constant.enums.RoleEnum;
 import com.softlaboratory.hafyapi.domain.dao.AccountDao;
-import com.softlaboratory.hafyapi.domain.dao.ProfileDao;
 import com.softlaboratory.hafyapi.domain.dao.RoleDao;
 import com.softlaboratory.hafyapi.domain.dao.TypeDao;
 import com.softlaboratory.hafyapi.domain.response.ListUserResponse;
