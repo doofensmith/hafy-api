@@ -65,6 +65,7 @@ public class AuthServiceImpl implements AuthService {
             log.debug("Login request : {}", request);
             Optional<AccountDao> account = accountRepository.findByUsername(request.getUsername());
             if (account.isPresent() && !passwordEncoder.matches(request.getPassword(), account.get().getPassword())) {
+                log.debug("Login failed.");
                 throw new BadCredentialsException("Wrong password!");
             }
 
