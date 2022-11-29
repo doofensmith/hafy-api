@@ -26,33 +26,36 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+        try {
+            HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
 
-        String authorization = httpServletRequest.getHeader(HttpHeaders.AUTHORIZATION);
-        String token = null;
-        String username = null;
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String authorization = httpServletRequest.getHeader(HttpHeaders.AUTHORIZATION);
+            String token = null;
+            String username = null;
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        if (authorization != null && authorization.startsWith(AppConstant.TOKEN_PREFIX)) {
-            token = authorization.replace(AppConstant.TOKEN_PREFIX,"");
-            try {
-                username = tokenProvider.getUsername(token);
-            }catch (Exception e) {
-                throw e;
+            if (authorization != null && authorization.startsWith(AppConstant.TOKEN_PREFIX)) {
+                token = authorization.replace(AppConstant.TOKEN_PREFIX,"");
+                try {
+                    username = tokenProvider.getUsername(token);
+                }catch (Exception e) {
+                    throw e;
+                }
             }
-        }
 
-        if (username != null && authentication == null) {
-            AccountDao account = (AccountDao) userDetailsService.loadUserByUsername(username);
+            if (username != null && authentication == null) {
+                AccountDao account = (AccountDao) userDetailsService.loadUserByUsername(username);
 
-            if (tokenProvider.isTokenValid(token, account)) {
-                Authentication authenticationToken = tokenProvider.getAuthenticationToken(token, authentication, account);
-                SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+                if (tokenProvider.isTokenValid(token, account)) {
+                    Authentication authenticationToken = tokenProvider.getAuthenticationToken(token, authentication, account);
+                    SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+                }
             }
+
+            filterChain.doFilter(servletRequest, servletResponse);
+        }catch (Exception e) {
+            throw e;
         }
-
-        filterChain.doFilter(servletRequest, servletResponse);
-
     }
 
 }
