@@ -77,7 +77,9 @@ public class SecurityConfig extends WebSecurityConfiguration {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return web -> web.ignoring()
                 .antMatchers("/api/h2-ui/**")
-                .antMatchers("/auth/**", "/error/**");
+                .antMatchers("/auth/**", "/error/**")
+                .antMatchers("/api-docs/**")
+                .antMatchers("/swagger-ui/**");
     }
 
 }

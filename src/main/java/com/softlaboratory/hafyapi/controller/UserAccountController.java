@@ -2,7 +2,7 @@ package com.softlaboratory.hafyapi.controller;
 
 import com.softlaboratory.hafyapi.constant.enums.AccountTypeEnum;
 import com.softlaboratory.hafyapi.constant.enums.RoleEnum;
-import com.softlaboratory.hafyapi.service.AccountService;
+import com.softlaboratory.hafyapi.service.AdministratorService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserAccountController {
 
     @Autowired
-    private AccountService service;
+    private AdministratorService service;
 
     @GetMapping(value = "/user-list")
     public ResponseEntity<Object> listUser() {
