@@ -5,10 +5,12 @@ import com.softlaboratory.hafyapi.service.RoleService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @Log4j2
 @RestController
+@PreAuthorize("hasAuthority('ADMIN')")
 @RequestMapping("/roles")
 public class RoleController {
 
