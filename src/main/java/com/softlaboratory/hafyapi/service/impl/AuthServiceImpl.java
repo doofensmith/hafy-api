@@ -151,7 +151,7 @@ public class AuthServiceImpl implements AuthService {
 
             account = accountRepository.save(account);
         }catch (Exception e) {
-            log.debug("Register failed, deleting profile.");
+            log.debug("Save new account failed, deleting profile.");
             profileRepository.delete(profileDao);
 
             log.info("Register failed.");
