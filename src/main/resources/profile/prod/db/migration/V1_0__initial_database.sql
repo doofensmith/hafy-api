@@ -31,6 +31,8 @@ CREATE TABLE t_account_profile (
    updated_at datetime NULL,
    updated_by VARCHAR(50) NULL,
    fullname VARCHAR(50) NOT NULL,
+   bio VARCHAR(100) NULL,
+   profile_pic VARCHAR(255) DEFAULT 'url',
    email VARCHAR(50) NULL,
    phone_number VARCHAR(15) NULL,
    address TEXT NULL,
@@ -53,7 +55,9 @@ CREATE TABLE t_account_master (
    updated_by VARCHAR(50) NULL,
    username VARCHAR(30) NOT NULL,
    password VARCHAR(100) NOT NULL,
-   active BIT(1) DEFAULT 1 NOT NULL,
+   active BIT(1) DEFAULT 0 NOT NULL,
+   wrong_password_counter SMALLINT DEFAULT 0,
+   one_time_password VARCHAR(6) NULL,
    id_profile BIGINT NOT NULL,
    CONSTRAINT pk_t_account_master PRIMARY KEY (id)
 );
@@ -64,7 +68,7 @@ ALTER TABLE t_account_master ADD CONSTRAINT FK_T_ACCOUNT_MASTER_ON_ID_PROFILE FO
 
 CREATE TABLE bt_account_roles (
   id_account BIGINT NOT NULL,
-   id_role BIGINT NULL
+   id_role BIGINT NOT NULL
 );
 
 ALTER TABLE bt_account_roles ADD CONSTRAINT fk_btaccrol_on_account_dao FOREIGN KEY (id_account) REFERENCES t_account_master (id);
@@ -73,7 +77,7 @@ ALTER TABLE bt_account_roles ADD CONSTRAINT fk_btaccrol_on_role_dao FOREIGN KEY 
 
 CREATE TABLE bt_account_types (
   id_account BIGINT NOT NULL,
-   id_type BIGINT NULL
+   id_type BIGINT NOT NULL
 );
 
 ALTER TABLE bt_account_types ADD CONSTRAINT fk_btacctyp_on_account_dao FOREIGN KEY (id_account) REFERENCES t_account_master (id);

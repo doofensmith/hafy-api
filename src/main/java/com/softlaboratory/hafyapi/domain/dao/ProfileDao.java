@@ -31,6 +31,12 @@ public class ProfileDao extends BaseDaoSoftDelete implements Serializable {
     @Column(nullable = false, length = 50)
     private String fullname;
 
+    @Column(length = 100)
+    private String bio;
+
+    @Column(name = "profile_pic", columnDefinition = "varchar(255) default 'url'")
+    private String profilePic = "url";
+
     @Column(length = 50, unique = true)
     private String email;
 
