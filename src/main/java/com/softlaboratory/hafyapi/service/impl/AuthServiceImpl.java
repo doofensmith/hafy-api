@@ -121,7 +121,7 @@ public class AuthServiceImpl implements AuthService {
         log.debug("Check duplicate username with repository.");
         Optional<AccountDao> accountDuplicate = accountRepository.findByUsername(request.getUsername());
         if (accountDuplicate.isPresent()) {
-            log.debug("Register failed due to duplicate username.");
+            log.info("Register failed due to duplicate username.");
             throw new DataIntegrityViolationException("Duplicate Username.");
         }
 
