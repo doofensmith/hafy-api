@@ -140,16 +140,25 @@ public class AuthServiceImpl implements AuthService {
         String otp = generateOtp();
 
         log.debug("Save new account with repository.");
-        AccountDao account = new AccountDao();
-        account.setProfile(profileDao);
-        account.setUsername(request.getUsername());
-        account.setPassword(passwordEncoder.encode(request.getPassword()));
-        account.setOneTimePassword(otp);
-        account.setRoles(List.of(role));
-        account.setTypes(List.of(type));
+        try {
+            AccountDao account = new AccountDao();
+            account.setProfile(profileDao);
+            account.setUsername(request.getUsername());
+            account.setPassword(passwordEncoder.encode(request.getPassword()));
+            account.setOneTimePassword(otp);
+            account.setRoles(List.of(role));
+            account.setTypes(List.of(type));
 
-        account = accountRepository.save(account);
+            account = accountRepository.save(account);
+        }catch (Exception e) {
+            log.debug("Register failed, deleting profile.");
+            profileRepository.delete(profileDao);
 
+            log.info("Register failed.");
+            throw e;
+        }
+
+        log.info("Register new account success.");
         return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), null);
     }
 
