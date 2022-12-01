@@ -1,5 +1,6 @@
 package com.softlaboratory.hafyapi.controller;
 
+import com.softlaboratory.hafyapi.domain.request.ChangePasswordRequest;
 import com.softlaboratory.hafyapi.domain.request.LoginRequest;
 import com.softlaboratory.hafyapi.domain.request.RegisterRequest;
 import com.softlaboratory.hafyapi.service.AuthService;
@@ -47,6 +48,15 @@ public class AuthController {
     public ResponseEntity<Object> resetAccount(@PathVariable Long id) {
         try {
             return service.reset(id);
+        }catch (Exception e) {
+            throw e;
+        }
+    }
+
+    @PostMapping(value = "/change-password/{id}")
+    public ResponseEntity<Object> changePassword(@PathVariable Long id, @RequestBody ChangePasswordRequest request) {
+        try {
+            return service.changePassword(id, request);
         }catch (Exception e) {
             throw e;
         }

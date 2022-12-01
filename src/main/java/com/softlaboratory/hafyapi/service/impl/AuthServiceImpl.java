@@ -6,6 +6,7 @@ import com.softlaboratory.hafyapi.domain.dao.AccountDao;
 import com.softlaboratory.hafyapi.domain.dao.ProfileDao;
 import com.softlaboratory.hafyapi.domain.dao.RoleDao;
 import com.softlaboratory.hafyapi.domain.dao.TypeDao;
+import com.softlaboratory.hafyapi.domain.request.ChangePasswordRequest;
 import com.softlaboratory.hafyapi.domain.request.LoginRequest;
 import com.softlaboratory.hafyapi.domain.request.RegisterRequest;
 import com.softlaboratory.hafyapi.domain.response.LoginResponse;
@@ -21,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -30,6 +32,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -58,6 +61,9 @@ public class AuthServiceImpl implements AuthService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private Random random;
 
     @Override
     public ResponseEntity<Object> login(LoginRequest request) {
@@ -88,7 +94,7 @@ public class AuthServiceImpl implements AuthService {
                 throw new BadCredentialsException("Wrong password!");
             }
 
-            if (account.get().getWrongPasswordCounter() != 0) {
+            if (account.isPresent() && account.get().getWrongPasswordCounter() != 0) {
                 log.debug("Reset wrong password counter.");
                 accountRepository.updateWrongPasswordCounterByIdEquals(account.get().getId(), (byte)0);
             }
@@ -108,6 +114,7 @@ public class AuthServiceImpl implements AuthService {
             log.info("Login success.");
             return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), loginResponse);
         } catch (Exception e) {
+            log.info("Login failed.");
             throw e;
         }
     }
@@ -213,9 +220,28 @@ public class AuthServiceImpl implements AuthService {
         }
     }
 
+    @Override
+    public ResponseEntity<Object> changePassword(Long id, ChangePasswordRequest request) {
+        log.info("Starting change password.");
+
+        log.debug("Find account to change password with repository.");
+        Optional<AccountDao> account = accountRepository.findById(id);
+
+        log.debug("Check old password request.");
+        if (account.isPresent() && passwordEncoder.matches(request.getOldPassword(), account.get().getPassword())) {
+            log.debug("Update account password with repository.");
+            accountRepository.updatePasswordByIdEquals(id, passwordEncoder.encode(request.getNewPassword()));
+
+            log.info("Change password success.");
+            return ResponseUtil.build(HttpStatus.OK, HttpStatus.OK.getReasonPhrase(), null);
+        }else {
+            log.info("Change password failed.");
+            throw new UsernameNotFoundException("Account not found.");
+        }
+    }
+
 
     private String generateOtp() {
-        Random random = new Random();
         Integer otp = random.nextInt(999999);
 
         return String.format("%06d", otp);
