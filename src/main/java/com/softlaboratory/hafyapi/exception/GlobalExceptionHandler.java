@@ -2,6 +2,7 @@ package com.softlaboratory.hafyapi.exception;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.softlaboratory.hafyapi.util.ResponseUtil;
+import io.jsonwebtoken.ExpiredJwtException;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +26,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = {AccessDeniedException.class})
     public ResponseEntity<Object> handleAcessDenied(Exception e) {
         return ResponseUtil.build(HttpStatus.FORBIDDEN, HttpStatus.FORBIDDEN.getReasonPhrase(), null);
+    }
+
+    @ExceptionHandler(value = {ExpiredJwtException.class})
+    public ResponseEntity<Object> handleJwtExpired(Exception e) {
+        return ResponseUtil.build(HttpStatus.UNAUTHORIZED, HttpStatus.UNAUTHORIZED.getReasonPhrase(), null);
     }
 
 }
