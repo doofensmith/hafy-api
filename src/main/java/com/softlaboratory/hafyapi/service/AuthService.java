@@ -10,5 +10,7 @@ public interface AuthService {
 
     ResponseEntity<Object> login(LoginRequest request);
     ResponseEntity<Object> register(RegisterRequest request);
+    ResponseEntity<Object> verification(Long id, String requestOtp);
+    ResponseEntity<Object> reset(Long id);
 
 }

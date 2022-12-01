@@ -40,8 +40,14 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable, UserD
     @Column(nullable = false, length = 100)
     private String password;
 
-    @Column(name = "active", columnDefinition = "boolean default true")
-    private boolean isActive = true;
+    @Column(name = "active", columnDefinition = "boolean default false")
+    private boolean isActive = false;
+
+    @Column(name = "wrong_password_counter", length = 1, columnDefinition = "smallint default 0")
+    private Byte wrongPasswordCounter = 0;
+
+    @Column(name = "one_time_password", length = 6)
+    private String oneTimePassword;
 
     @OneToOne
     @JoinColumn(name = "id_profile", nullable = false)
