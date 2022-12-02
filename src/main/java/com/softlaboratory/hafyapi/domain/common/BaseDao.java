@@ -12,6 +12,8 @@ import javax.persistence.PreUpdate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 
+import static com.softlaboratory.hafyapi.constant.AppConstant.APP_TIMEZONE;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -22,21 +24,25 @@ public class BaseDao {
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "created_by", nullable = false)
+    @Column(name = "created_by", nullable = false, length = 50)
     private String createdBy;
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(name = "updated_by", length = 50)
+    private String updatedBy;
+
     @PrePersist
     void onCreate() {
-        this.createdAt = LocalDateTime.now(ZoneId.of("GMT+7"));
+        this.createdAt = LocalDateTime.now(ZoneId.of(APP_TIMEZONE));
         this.createdBy = "SYSTEM";
     }
 
     @PreUpdate
     void onUpdate() {
-        this.updatedAt = LocalDateTime.now(ZoneId.of("GMT+7"));
+        this.updatedAt = LocalDateTime.now(ZoneId.of(APP_TIMEZONE));
+        this.updatedBy = "SYSTEM";
     }
 
 }
